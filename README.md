@@ -1,1 +1,1 @@
-# Lista-MatematicaDiscreta
+Lista de exercícios matemática discreta 
