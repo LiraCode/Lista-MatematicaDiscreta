@@ -16,6 +16,8 @@ int _reverseEuclides(int a, int b, int *s, int *t, int *count)
     int div = a / b;
     if (mod == 0)
     {
+        *s = 1;
+        *t = 0;
         return b;
     }
 
@@ -95,8 +97,8 @@ void printCombination(LinearCombination c)
 
 int main(void)
 {
-    int a = 77;
-    int b = 3;
+    int a = 1;
+    int b = 5;
     LinearCombination result = reverseEuclides(a, b);
     printCombination(result);
     return 0;

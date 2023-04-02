@@ -16,6 +16,8 @@ int _reverseEuclides(int a, int b, int *s, int *t, int *count)
     int div = a / b;
     if (mod == 0)
     {
+        *s = 1;
+        *t = 0;
         return b;
     }
 
@@ -105,8 +107,8 @@ int getInverse(int a, int m)
 
 int main(void)
 {
-    int a = 3;
-    int m = 8;
+    int a = 42;
+    int m = 127;
 
     printf("Inverse of %d mod %d = %d\n", a, m, getInverse(a, m));
     return 0;
