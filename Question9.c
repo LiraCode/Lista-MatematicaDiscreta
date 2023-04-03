@@ -1,19 +1,11 @@
 #include <stdio.h>
-#include "reverse.c"
-
+#include "libs/reverse.c"
+#include "libs/mdc.c"
 typedef struct Congruence {
   int a;
   int b;
   int m;
 } Congruence;
-
-int mdc(int a, int b){
-    if (b == 0){
-        return a;
-    }
-
-    mdc(b, a % b);
-}
 
 int getSolution(int b1, int m1, int b2, int m2, int b3, int m3){
     if (mdc(m1, m2) != 1 || mdc(m2, m3) != 1 || mdc(m1, m3) != 1){

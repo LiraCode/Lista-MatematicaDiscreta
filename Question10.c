@@ -1,6 +1,6 @@
 
 #include <stdio.h>
-#include "reverse.c"
+#include "libs/reverse.c"
 
 void solveCongruences(int b[], int m[], int n){
     int M = 1;
