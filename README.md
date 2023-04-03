@@ -32,6 +32,6 @@ gcc QuestionX.c -o output
 - **Question5.c**: Determinar o mdc via método de Euclides.
 - **Question6.c**: Encontrar a combinação linear de dois números pelo método de Euclides reverso.
 - **Question7.c**: Encontrar o inverso de $a$ mod $b$.
-- **Question8.c**: Encontrar a solução para uma congruência linear do tipo $ax \equiv b \; mod \; m$.
+- **Question8.c**: Encontrar a solução para uma congruência linear do tipo $ax \equiv b \: mod \: m$.
 - **Question9.c**: Encontrar a solução de um sistema de 3 congruências lineares pelo Teorema Chinês do Resto.
 - **Question10.c**: Encontrar a solução de um sistema de $n$ congruências lineares pelo Teorema Chinês do Resto.
