@@ -46,7 +46,7 @@ void printResults(CongruenceResult res)
 {
     if (res.nSolutions == 0)
     {
-        printf("Congruence does not have a Solution!");
+        printf("A congruência não tem solução.");
         return;
     }
     for (int i = 0; i < res.nSolutions; i++)
@@ -57,9 +57,11 @@ void printResults(CongruenceResult res)
 
 int main(void)
 {
-    int a = 4;
-    int b = 8;
-    int m = 20;
+    int a;
+    int b;
+    int m;
+    printf("Entre três números inteiros (a, b e m): ");
+    scanf("%d %d %d", &a, &b, &m);
     CongruenceResult res = evaluateCongruence(a, b, m);
     printResults(res);
     return 0;

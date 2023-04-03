@@ -12,8 +12,10 @@ int mdc(int a, int b)
 
 int main(void)
 {
-    int a = 124;
-    int b = 12;
+    int a;
+    int b;
+    printf("Entre dois números inteiros: ");
+    scanf("%d %d", &a, &b);
     printf("MDC(%d, %d) = %d\n", a, b, mdc(a, b));
     return 0;
 }

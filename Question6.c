@@ -8,8 +8,10 @@ void printCombination(LinearCombination c)
 
 int main(void)
 {
-    int a = 1;
-    int b = 5;
+    int a;
+    int b;
+    printf("Entre dois números inteiros: ");
+    scanf("%d %d", &a, &b);
     LinearCombination result = reverseEuclides(a, b);
     printCombination(result);
     return 0;

@@ -47,7 +47,9 @@ void factor(int n, int primeFactor)
 
 int main(void)
 {
-    int n = 120;
+    int n;
+    printf("Entre um número inteiro: ");
+    scanf("%d", &n);
     printf("%d = ", n);
     factor(n, 1);
     return 0;

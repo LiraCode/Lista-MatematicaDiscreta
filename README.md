@@ -1,7 +1,7 @@
 # Aula prática de Matemática Discreta
 Resolução da lista de exercícios reference à aula prática de Matemática Discreta, abordando conceitos de Aplicação da Teoria dos Números.
 
-*Após o submeter ao professor a lista de códigos, o repositório ficará público.*
+*Após submeter ao professor a lista de códigos, o repositório ficará público.*
 
 ---
 ## Integrantes do Grupo
