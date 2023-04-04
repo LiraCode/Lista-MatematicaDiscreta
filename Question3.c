@@ -1,48 +1,53 @@
 #include <stdio.h>
 #include <math.h>
 
-int _isPrime(int divisor, int n)
+int isPrime(int n)
 {
-    if (n <= 1)
-    {
-        return 0;
-    }
-    if (divisor > (double)sqrt((double)n))
+    if (n == 2)
     {
         return 1;
     }
-
-    if (n % divisor == 0)
+    if (n <= 1 || n % 2 == 0)
     {
         return 0;
     }
-    _isPrime(divisor + 1, n);
-}
-
-int isPrime(int n)
-{
-    return _isPrime(2, n);
-}
-
-void factor(int n, int primeFactor)
-{
-    if (n == 1)
+    int divisor = 3;
+    while (divisor <= sqrt((double)n))
     {
+        if (n % divisor == 0)
+        {
+            return 0;
+        }
+        divisor += 2;
+    }
+    return 1;
+}
+
+void factor(int n)
+{
+    if (n <= 1 || isPrime(n))
+    {
+        printf("%d", n);
         return;
     }
-    if (isPrime(primeFactor))
+
+    int primeFactor = 2;
+    while (n != 1)
     {
-        while (n % primeFactor == 0)
+        if (isPrime(primeFactor))
         {
-            printf("%d", primeFactor);
-            if (n != primeFactor)
+            while (n % primeFactor == 0)
             {
-                printf(" * ");
+                printf("%d", primeFactor);
+                if (n != primeFactor)
+                {
+                    printf(" * ");
+                }
+                n = n / primeFactor;
             }
-            n = n / primeFactor;
         }
+        primeFactor++;
     }
-    factor(n, primeFactor + 1);
 }
 
 int main(void)
@@ -51,6 +56,6 @@ int main(void)
     printf("Entre um número inteiro: ");
     scanf("%d", &n);
     printf("%d = ", n);
-    factor(n, 1);
+    factor(n);
     return 0;
 }
