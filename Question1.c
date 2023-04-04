@@ -3,6 +3,7 @@
 
 
 int primo(int n, int d){
+    if(n==2) return 1;
     if(n<2){
         return 0;
     }
